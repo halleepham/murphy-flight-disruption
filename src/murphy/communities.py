@@ -35,6 +35,7 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import pathlib
+import random
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -207,6 +208,10 @@ def detect(g: ig.Graph, method: str = "leiden", seed: int = 42, resolution: floa
             resolution_parameter=resolution, seed=seed)
         return list(part.membership)
     if method == "louvain":
+        # igraph's Louvain takes no seed argument -- it draws from the stdlib RNG.
+        # Without seeding it here the "five seeds" were five unseeded runs, and any
+        # finding from them was not reproducible. N11 is the precedent.
+        random.seed(seed)
         part = g.community_multilevel(
             weights=g.es["weight"] if "weight" in g.es.attributes() else None,
             resolution=resolution)
@@ -320,8 +325,14 @@ def build_itineraries(flights, state, communities_by_hour, origin, dest, after_h
         base = float(np.mean(risks))
 
         # same-community penalty: does the hub share the origin's problem?
+        #
+        # The community must be read from the hour BEFORE the leg is scheduled, for
+        # the same reason as `_risk_before`. Communities are keyed by the hour flights
+        # ACTUALLY departed in, so the community for hour h is not complete until h
+        # ends -- after the traveller has had to decide. Reading it by scheduled hour
+        # was a leak of exactly the kind the STGNN work found (T11).
         same_comm = False
-        h = o["legs"][0]["sched_dep_hour"]
+        h = o["legs"][0]["sched_dep_hour"] - dt.timedelta(hours=1)
         comm = communities_by_hour.get(h, {})
         if o["hub"] and origin in comm and o["hub"] in comm:
             same_comm = comm[origin] == comm[o["hub"]]

@@ -108,7 +108,9 @@ def cofailure(flights, comm_by_hour, seed=42):
     for f in flights:
         if f["dep_delay"] is None and not f["cancelled"]:
             continue
-        k = (f["origin"], f["sched_dep_hour"])
+        # Keyed by actual departure hour, matching how communities are keyed, so the
+        # two sides of the comparison describe the same hour.
+        k = (f["origin"], f["actual_dep_hour"])
         fail[k][0] += 1
         fail[k][1] += int(f["failed"])
     rate = {k: v[1] / v[0] for k, v in fail.items() if v[0] >= C.MIN_FLIGHTS_HOUR}

@@ -18,22 +18,22 @@
       },
       "louvain": {
         "hours": 24,
-        "mean_communities": 6.12,
-        "mean_modularity": 0.4399,
+        "mean_communities": 6.08,
+        "mean_modularity": 0.4406,
         "hours_with_disconnected_community": 0,
-        "stability": 0.9355,
-        "stability_null": 0.6814
+        "stability": 0.9326,
+        "stability_null": 0.6815
       }
     },
     "cofailure": {
-      "same_community_pairs": 7469,
-      "same_community_both_bad": 0.6366,
-      "diff_community_pairs": 29534,
-      "diff_community_both_bad": 0.5938,
-      "lift": 0.0428,
-      "null_same_both_bad": 0.5939,
-      "null_diff_both_bad": 0.6046,
-      "null_lift": -0.0107
+      "same_community_pairs": 10046,
+      "same_community_both_bad": 0.6487,
+      "diff_community_pairs": 39505,
+      "diff_community_both_bad": 0.608,
+      "lift": 0.0407,
+      "null_same_both_bad": 0.6106,
+      "null_diff_both_bad": 0.6177,
+      "null_lift": -0.0071
     },
     "flight_graph": {
       "nodes": 21753,
@@ -47,9 +47,9 @@
       },
       "louvain": {
         "seeds": 5,
-        "communities_mean": 34.6,
-        "communities_std": 1.2,
-        "modularity_mean": 0.665,
+        "communities_mean": 35.6,
+        "communities_std": 1.74,
+        "modularity_mean": 0.6643,
         "runs_with_disconnected_community": 0
       }
     },
@@ -656,15 +656,15 @@
     "routing": {
       "cases": 310,
       "baseline_top1_held": 0.7452,
-      "community_top1_held": 0.7645,
+      "community_top1_held": 0.7548,
       "oracle_any_held": 1.0,
-      "cases_changed": 59,
-      "cases_unchanged": 251,
-      "changed_baseline_held": 0.661,
-      "changed_community_held": 0.7627,
-      "changed_better": 14,
-      "changed_worse": 8,
-      "changed_neutral": 37
+      "cases_changed": 46,
+      "cases_unchanged": 264,
+      "changed_baseline_held": 0.7609,
+      "changed_community_held": 0.8261,
+      "changed_better": 8,
+      "changed_worse": 5,
+      "changed_neutral": 33
     },
     "penalty_sweep": {
       "0.00": {
@@ -672,24 +672,24 @@
         "changed": 0
       },
       "0.05": {
-        "top1_held": 0.7419,
-        "changed": 35
+        "top1_held": 0.7387,
+        "changed": 28
       },
       "0.10": {
         "top1_held": 0.7484,
-        "changed": 46
+        "changed": 42
       },
       "0.25": {
-        "top1_held": 0.7645,
-        "changed": 59
+        "top1_held": 0.7548,
+        "changed": 46
       },
       "0.50": {
-        "top1_held": 0.7645,
-        "changed": 59
+        "top1_held": 0.7548,
+        "changed": 46
       },
       "1.00": {
-        "top1_held": 0.7645,
-        "changed": 59
+        "top1_held": 0.7548,
+        "changed": 46
       }
     }
   },
@@ -706,21 +706,21 @@
       },
       "louvain": {
         "hours": 22,
-        "mean_communities": 5.27,
-        "mean_modularity": 0.41,
+        "mean_communities": 5.23,
+        "mean_modularity": 0.409,
         "hours_with_disconnected_community": 0,
-        "stability": 0.9214,
-        "stability_null": 0.6655
+        "stability": 0.9185,
+        "stability_null": 0.661
       }
     },
     "cofailure": {
-      "same_community_pairs": 8404,
-      "same_community_both_bad": 0.0001,
-      "diff_community_pairs": 31172,
-      "diff_community_both_bad": 0.0001,
-      "lift": 0.0,
-      "null_same_both_bad": 0.0,
-      "null_diff_both_bad": 0.0001,
+      "same_community_pairs": 10107,
+      "same_community_both_bad": 0.0,
+      "diff_community_pairs": 37149,
+      "diff_community_both_bad": 0.0002,
+      "lift": -0.0002,
+      "null_same_both_bad": 0.0001,
+      "null_diff_both_bad": 0.0002,
       "null_lift": -0.0001
     },
     "flight_graph": {
@@ -735,9 +735,9 @@
       },
       "louvain": {
         "seeds": 5,
-        "communities_mean": 33.2,
-        "communities_std": 0.98,
-        "modularity_mean": 0.6642,
+        "communities_mean": 33.6,
+        "communities_std": 2.06,
+        "modularity_mean": 0.6629,
         "runs_with_disconnected_community": 0
       }
     },
@@ -1388,13 +1388,13 @@
       "baseline_top1_held": 0.973,
       "community_top1_held": 0.9797,
       "oracle_any_held": 1.0,
-      "cases_changed": 33,
-      "cases_unchanged": 263,
-      "changed_baseline_held": 0.9394,
+      "cases_changed": 31,
+      "cases_unchanged": 265,
+      "changed_baseline_held": 0.9355,
       "changed_community_held": 1.0,
       "changed_better": 2,
       "changed_worse": 0,
-      "changed_neutral": 31
+      "changed_neutral": 29
     },
     "penalty_sweep": {
       "0.00": {
@@ -1403,23 +1403,23 @@
       },
       "0.05": {
         "top1_held": 0.9764,
-        "changed": 28
+        "changed": 26
       },
       "0.10": {
         "top1_held": 0.9797,
-        "changed": 33
+        "changed": 31
       },
       "0.25": {
         "top1_held": 0.9797,
-        "changed": 33
+        "changed": 31
       },
       "0.50": {
         "top1_held": 0.9797,
-        "changed": 33
+        "changed": 31
       },
       "1.00": {
         "top1_held": 0.9797,
-        "changed": 33
+        "changed": 31
       }
     }
   }
