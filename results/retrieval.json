@@ -1,0 +1,56 @@
+{
+  "horizon_hours": 2,
+  "bad_threshold": 0.5,
+  "storm": {
+    "day": "2024-07-19",
+    "queries": 1359,
+    "mean_returned": 15.8,
+    "global": {
+      "baseline": {
+        "precision": 0.6556,
+        "recall": 0.2293,
+        "f1": 0.3289
+      },
+      "community": {
+        "precision": 0.6534,
+        "recall": 0.2306,
+        "f1": 0.3275
+      }
+    },
+    "targeted": {
+      "baseline_precision": 1.0,
+      "community_precision": 0.078
+    },
+    "summary_compression": {
+      "airport_rows": 82,
+      "summaries": 5,
+      "ratio": 16.4
+    }
+  },
+  "calm": {
+    "day": "2024-10-29",
+    "queries": 132,
+    "mean_returned": 17.3,
+    "global": {
+      "baseline": {
+        "precision": 0.0303,
+        "recall": 0.1717,
+        "f1": 0.0515
+      },
+      "community": {
+        "precision": 0.0379,
+        "recall": 0.1641,
+        "f1": 0.0595
+      }
+    },
+    "targeted": {
+      "baseline_precision": 1.0,
+      "community_precision": 0.0757
+    },
+    "summary_compression": {
+      "airport_rows": 90,
+      "summaries": 6,
+      "ratio": 15.0
+    }
+  }
+}

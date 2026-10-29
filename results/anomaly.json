@@ -203,14 +203,6 @@
     ],
     "top_anomalies": [
       {
-        "airport": "IAD",
-        "hour": "11:00Z",
-        "late_share": 1.0,
-        "usual": 0.0,
-        "z": 22.9,
-        "n": 10
-      },
-      {
         "airport": "TPA",
         "hour": "05:00Z",
         "late_share": 1.0,
@@ -219,8 +211,16 @@
         "n": 10
       },
       {
+        "airport": "IAD",
+        "hour": "11:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 22.9,
+        "n": 10
+      },
+      {
         "airport": "PIT",
-        "hour": "07:00Z",
+        "hour": "08:00Z",
         "late_share": 1.0,
         "usual": 0.0,
         "z": 21.6,
@@ -228,7 +228,7 @@
       },
       {
         "airport": "PIT",
-        "hour": "08:00Z",
+        "hour": "07:00Z",
         "late_share": 1.0,
         "usual": 0.0,
         "z": 21.6,
@@ -474,16 +474,16 @@
         "n": 7
       },
       {
-        "airport": "BGR",
-        "hour": "11:00Z",
+        "airport": "FAT",
+        "hour": "09:00Z",
         "late_share": 0.5,
         "usual": 0.0,
         "z": 8.6,
         "n": 4
       },
       {
-        "airport": "FAT",
-        "hour": "09:00Z",
+        "airport": "BGR",
+        "hour": "11:00Z",
         "late_share": 0.5,
         "usual": 0.0,
         "z": 8.6,
