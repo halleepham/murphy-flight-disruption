@@ -1,0 +1,90 @@
+{
+  "min_unit_flights": 6,
+  "weather": {
+    "day": "2024-01-15",
+    "units": 355,
+    "edges": 8829,
+    "carrier_edges": 8281,
+    "airport_edges": 548,
+    "communities": 26,
+    "nmi_carrier": 0.1495,
+    "nmi_airport": 0.6998,
+    "shape": "airport-shaped",
+    "largest_community": {
+      "units": 61,
+      "mean_failure": 0.678,
+      "top_carriers": [
+        [
+          "WN",
+          37
+        ],
+        [
+          "UA",
+          10
+        ],
+        [
+          "AA",
+          6
+        ]
+      ]
+    }
+  },
+  "storm": {
+    "day": "2024-07-19",
+    "units": 393,
+    "edges": 12477,
+    "carrier_edges": 11954,
+    "airport_edges": 523,
+    "communities": 41,
+    "nmi_carrier": 0.211,
+    "nmi_airport": 0.7404,
+    "shape": "airport-shaped",
+    "largest_community": {
+      "units": 81,
+      "mean_failure": 0.93,
+      "top_carriers": [
+        [
+          "DL",
+          40
+        ],
+        [
+          "AA",
+          23
+        ],
+        [
+          "UA",
+          17
+        ]
+      ]
+    }
+  },
+  "calm": {
+    "day": "2024-10-29",
+    "units": 331,
+    "edges": 8387,
+    "carrier_edges": 7938,
+    "airport_edges": 449,
+    "communities": 30,
+    "nmi_carrier": 0.1459,
+    "nmi_airport": 0.7291,
+    "shape": "airport-shaped",
+    "largest_community": {
+      "units": 71,
+      "mean_failure": 0.031,
+      "top_carriers": [
+        [
+          "WN",
+          36
+        ],
+        [
+          "DL",
+          14
+        ],
+        [
+          "UA",
+          8
+        ]
+      ]
+    }
+  }
+}
