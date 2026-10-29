@@ -288,6 +288,12 @@ if __name__ == "__main__":
 MCT_MIN = 45          # Murphy's single global connection rule
 MAX_CONNECT_MIN = 360
 PENALTY = 0.25
+MAX_DETOUR = 1.5      # a one-stop may not exceed 1.5x the direct great-circle distance
+
+# Without the detour cap the generator offered ATL -> SEA -> EWR as a low-risk way to
+# reach Newark. It is technically a feasible connection and no traveller would consider
+# it, so including such options flatters the method: the penalty gets to "avoid" hubs
+# that were never real candidates.
 
 
 def _risk_before(state, ap, hour):
@@ -297,8 +303,12 @@ def _risk_before(state, ap, hour):
     return v["late_share"] if v else None
 
 
-def build_itineraries(flights, state, communities_by_hour, origin, dest, after_hour):
+def build_itineraries(flights, state, communities_by_hour, origin, dest, after_hour,
+                      xy=None):
     """Direct and one-stop options leaving `origin` after `after_hour`."""
+    xy = xy if xy is not None else coords()
+    direct_km = (great_circle_km(origin, dest, xy)
+                 if origin in xy and dest in xy else None)
     majors = [f for f in flights if f["carrier"] in MAJORS]
     out_o = [f for f in majors if f["origin"] == origin and f["dep_utc"] >= after_hour]
     into_d = [f for f in majors if f["dest"] == dest and f["dep_utc"] >= after_hour]
@@ -314,8 +324,15 @@ def build_itineraries(flights, state, communities_by_hour, origin, dest, after_h
             if g["origin"] != f["dest"] or g["dep_utc"] <= f["arr_utc"]:
                 continue
             gap = (g["dep_utc"] - f["arr_utc"]).total_seconds() / 60.0
-            if MCT_MIN <= gap <= MAX_CONNECT_MIN:
-                options.append({"legs": [f, g], "hub": f["dest"]})
+            if not (MCT_MIN <= gap <= MAX_CONNECT_MIN):
+                continue
+            hub = f["dest"]
+            if direct_km and hub in xy:
+                via = (great_circle_km(origin, hub, xy)
+                       + great_circle_km(hub, dest, xy))
+                if via > MAX_DETOUR * direct_km:
+                    continue
+            options.append({"legs": [f, g], "hub": hub})
 
     scored = []
     for o in options:
@@ -358,12 +375,13 @@ def _itinerary_held(legs) -> bool:
     return True
 
 
-def evaluate_routing(flights, state, communities_by_hour, cases):
+def evaluate_routing(flights, state, communities_by_hour, cases, xy=None):
     """Top-1 success rate, baseline vs community-aware, over routing cases."""
+    xy = xy if xy is not None else coords()
     rows = []
     for origin, dest, after_hour in cases:
         opts = build_itineraries(flights, state, communities_by_hour,
-                                 origin, dest, after_hour)
+                                 origin, dest, after_hour, xy)
         if len(opts) < 3:
             continue
         if not any(o["hub"] for o in opts):

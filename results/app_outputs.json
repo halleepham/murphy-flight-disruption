@@ -1,0 +1,126 @@
+{
+  "case": {
+    "origin": "DEN",
+    "dest": "SEA",
+    "day": "2024-07-19",
+    "decision_hour": "15:00Z",
+    "origin_community": 0,
+    "origin_lat": 39.8584,
+    "origin_lon": -104.667,
+    "dest_lat": 47.449,
+    "dest_lon": -122.3093,
+    "n_itineraries": 53
+  },
+  "routes": [
+    {
+      "hub": "SLC",
+      "depart": "19:34Z",
+      "risk": 0.583,
+      "same_community": true,
+      "held": false,
+      "is_baseline_pick": true,
+      "is_community_pick": false,
+      "hub_lat": 40.7884,
+      "hub_lon": -111.9778,
+      "hub_community": 0,
+      "origin_community_at_option": 0
+    },
+    {
+      "hub": "ABQ",
+      "depart": "15:35Z",
+      "risk": 0.605,
+      "same_community": true,
+      "held": true,
+      "is_baseline_pick": false,
+      "is_community_pick": false,
+      "hub_lat": 35.0402,
+      "hub_lon": -106.6092,
+      "hub_community": 0,
+      "origin_community_at_option": 0
+    },
+    {
+      "hub": "SMF",
+      "depart": "15:55Z",
+      "risk": 0.619,
+      "same_community": true,
+      "held": true,
+      "is_baseline_pick": false,
+      "is_community_pick": false,
+      "hub_lat": 38.6954,
+      "hub_lon": -121.5908,
+      "hub_community": 0,
+      "origin_community_at_option": 0
+    },
+    {
+      "hub": null,
+      "depart": "19:58Z",
+      "risk": 0.628,
+      "same_community": false,
+      "held": true,
+      "is_baseline_pick": false,
+      "is_community_pick": true,
+      "hub_lat": null,
+      "hub_lon": null,
+      "hub_community": null,
+      "origin_community_at_option": 0
+    },
+    {
+      "hub": "LAS",
+      "depart": "19:33Z",
+      "risk": 0.667,
+      "same_community": true,
+      "held": true,
+      "is_baseline_pick": false,
+      "is_community_pick": false,
+      "hub_lat": 36.0804,
+      "hub_lon": -115.1523,
+      "hub_community": 0,
+      "origin_community_at_option": 0
+    },
+    {
+      "hub": "BZN",
+      "depart": "16:35Z",
+      "risk": 0.74,
+      "same_community": true,
+      "held": false,
+      "is_baseline_pick": false,
+      "is_community_pick": false,
+      "hub_lat": 45.7769,
+      "hub_lon": -111.153,
+      "hub_community": 0,
+      "origin_community_at_option": 0
+    }
+  ],
+  "forecast": {
+    "quantiles": {
+      "p10": -12.9,
+      "p25": -6.2,
+      "p50": 6.5,
+      "p75": 34.2,
+      "p90": 71.7
+    },
+    "n_comparable": 92,
+    "actual_today": [
+      3,
+      -13,
+      25,
+      -2,
+      -18,
+      14,
+      38,
+      -6,
+      59,
+      -5,
+      40,
+      23,
+      243,
+      56,
+      43,
+      84,
+      9,
+      137,
+      115,
+      197
+    ]
+  }
+}
