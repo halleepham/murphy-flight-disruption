@@ -55,8 +55,16 @@ GEO_CUT = 3.0             # drop edges beyond 3 sigma
 MIN_FLIGHTS_HOUR = 3      # an airport-hour below this is too thin to characterise
 MAJORS = ("AA", "DL", "UA", "WN", "AS", "B6", "F9", "G4", "HA")
 
-STORM_DAY = "2024-07-19"   # CrowdStrike
+STORM_DAY = "2024-07-19"    # CrowdStrike -- a systems outage, not weather
+WEATHER_DAY = "2024-01-15"  # the worst weather day of 2024: 158k minutes of
+                            # BTS weather-caused delay, 39.2% late, 15.9% cancelled
 CALM_DAY = "2024-10-29"
+
+# Why three days, not two. C1 groups airports that are near each other AND behaving
+# alike. Weather is the usual reason nearby airports fail together, but the detector
+# never sees a cause -- so validating it only on CrowdStrike tested spatial
+# correlation from a SYSTEMS outage, never from weather itself. 15 January is the
+# test of the mechanism the design actually claims.
 
 
 def coords() -> dict[str, tuple[float, float]]:

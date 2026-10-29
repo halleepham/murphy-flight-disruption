@@ -3,9 +3,15 @@
 Stage 1 claimed communities would make correlated failure visible and fix switching
 decisions. This runs that claim against two real days and reports where it holds.
 
-  storm  19 Jul 2024, the CrowdStrike outage -- 52.1% of departures 15+ late, 16.1%
-         cancelled
-  calm   29 Oct 2024 -- 8.2% late, 0.18% cancelled
+  storm    19 Jul 2024, the CrowdStrike outage -- a SYSTEMS failure. 52.1% late,
+           16.1% cancelled
+  weather  15 Jan 2024, the worst weather day of the year -- 158k minutes of
+           BTS weather-caused delay. 39.2% late, 15.9% cancelled
+  calm     29 Oct 2024 -- 8.2% late, 0.18% cancelled
+
+C1 is defined as a spatial coupling, and weather is the mechanism the design claims.
+Validating only on CrowdStrike tested the detector against a systems outage that
+happened to express itself geographically, which is a weaker test than it looks.
 
 Outputs results/communities.json.
 
@@ -179,7 +185,8 @@ def main() -> None:
     results = {"config": {"geo_sigma_km": C.GEO_SIGMA_KM, "mct_min": C.MCT_MIN,
                           "penalty": C.PENALTY, "late_min": C.LATE_MIN}}
 
-    for label, day in (("storm", C.STORM_DAY), ("calm", C.CALM_DAY)):
+    for label, day in (("storm", C.STORM_DAY), ("weather", C.WEATHER_DAY),
+                       ("calm", C.CALM_DAY)):
         print(f"\n=== {label}  {day} ===")
         d = C.load_day(day, con)
         state = C.airport_hour_state(d["flights"])

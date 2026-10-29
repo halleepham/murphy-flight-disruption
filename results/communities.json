@@ -693,6 +693,659 @@
       }
     }
   },
+  "weather": {
+    "day": "2024-01-15",
+    "algorithms": {
+      "leiden": {
+        "hours": 23,
+        "mean_communities": 5.39,
+        "mean_modularity": 0.4806,
+        "hours_with_disconnected_community": 0,
+        "stability": 0.9257,
+        "stability_null": 0.6486
+      },
+      "louvain": {
+        "hours": 23,
+        "mean_communities": 5.39,
+        "mean_modularity": 0.4789,
+        "hours_with_disconnected_community": 0,
+        "stability": 0.9192,
+        "stability_null": 0.645
+      }
+    },
+    "cofailure": {
+      "same_community_pairs": 9081,
+      "same_community_both_bad": 0.3737,
+      "diff_community_pairs": 30090,
+      "diff_community_both_bad": 0.3226,
+      "lift": 0.0511,
+      "null_same_both_bad": 0.3404,
+      "null_diff_both_bad": 0.3326,
+      "null_lift": 0.0078
+    },
+    "flight_graph": {
+      "nodes": 19106,
+      "edges": 41785,
+      "leiden": {
+        "seeds": 5,
+        "communities_mean": 37.2,
+        "communities_std": 0.98,
+        "modularity_mean": 0.684,
+        "runs_with_disconnected_community": 0
+      },
+      "louvain": {
+        "seeds": 5,
+        "communities_mean": 41.2,
+        "communities_std": 1.47,
+        "modularity_mean": 0.6683,
+        "runs_with_disconnected_community": 0
+      }
+    },
+    "snapshot": {
+      "hour": "2024-01-15 17:00Z",
+      "airports": {
+        "ABQ": {
+          "community": 1,
+          "lat": 35.0402,
+          "lon": -106.6092,
+          "late_share": 0.8333,
+          "n": 6
+        },
+        "ATL": {
+          "community": 3,
+          "lat": 33.6404,
+          "lon": -84.4269,
+          "late_share": 0.5588,
+          "n": 34
+        },
+        "AUS": {
+          "community": 0,
+          "lat": 30.1945,
+          "lon": -97.6699,
+          "late_share": 0.8,
+          "n": 10
+        },
+        "BDL": {
+          "community": 2,
+          "lat": 41.9389,
+          "lon": -72.6832,
+          "late_share": 0.6667,
+          "n": 3
+        },
+        "BNA": {
+          "community": 0,
+          "lat": 36.1245,
+          "lon": -86.6782,
+          "late_share": 1.0,
+          "n": 4
+        },
+        "BOS": {
+          "community": 2,
+          "lat": 42.3644,
+          "lon": -71.0052,
+          "late_share": 0.2632,
+          "n": 19
+        },
+        "BUF": {
+          "community": 2,
+          "lat": 42.9405,
+          "lon": -78.7322,
+          "late_share": 0.8,
+          "n": 5
+        },
+        "BWI": {
+          "community": 2,
+          "lat": 39.1754,
+          "lon": -76.6682,
+          "late_share": 0.5556,
+          "n": 9
+        },
+        "CHS": {
+          "community": 3,
+          "lat": 32.8987,
+          "lon": -80.0405,
+          "late_share": 0.6,
+          "n": 5
+        },
+        "CLE": {
+          "community": 2,
+          "lat": 41.4109,
+          "lon": -81.8494,
+          "late_share": 0.5,
+          "n": 4
+        },
+        "CLT": {
+          "community": 3,
+          "lat": 35.214,
+          "lon": -80.9431,
+          "late_share": 0.5135,
+          "n": 37
+        },
+        "CMH": {
+          "community": 2,
+          "lat": 39.998,
+          "lon": -82.8919,
+          "late_share": 0.0,
+          "n": 6
+        },
+        "CVG": {
+          "community": 0,
+          "lat": 39.0461,
+          "lon": -84.6622,
+          "late_share": 0.2857,
+          "n": 7
+        },
+        "DAL": {
+          "community": 0,
+          "lat": 32.8471,
+          "lon": -96.8518,
+          "late_share": 0.7143,
+          "n": 7
+        },
+        "DCA": {
+          "community": 2,
+          "lat": 38.8521,
+          "lon": -77.0377,
+          "late_share": 0.8889,
+          "n": 18
+        },
+        "DEN": {
+          "community": 1,
+          "lat": 39.8584,
+          "lon": -104.667,
+          "late_share": 0.925,
+          "n": 40
+        },
+        "DFW": {
+          "community": 0,
+          "lat": 32.896,
+          "lon": -97.0372,
+          "late_share": 0.9394,
+          "n": 33
+        },
+        "DSM": {
+          "community": 0,
+          "lat": 41.5349,
+          "lon": -93.6607,
+          "late_share": 1.0,
+          "n": 4
+        },
+        "DTW": {
+          "community": 2,
+          "lat": 42.2121,
+          "lon": -83.3488,
+          "late_share": 0.75,
+          "n": 16
+        },
+        "ELP": {
+          "community": 1,
+          "lat": 31.8067,
+          "lon": -106.3778,
+          "late_share": 0.6667,
+          "n": 3
+        },
+        "EWR": {
+          "community": 2,
+          "lat": 40.6925,
+          "lon": -74.1687,
+          "late_share": 0.5263,
+          "n": 19
+        },
+        "EYW": {
+          "community": 3,
+          "lat": 24.5561,
+          "lon": -81.7596,
+          "late_share": 0.5,
+          "n": 4
+        },
+        "FAR": {
+          "community": 0,
+          "lat": 46.9194,
+          "lon": -96.815,
+          "late_share": 0.5,
+          "n": 4
+        },
+        "FLL": {
+          "community": 3,
+          "lat": 26.0726,
+          "lon": -80.1528,
+          "late_share": 0.4375,
+          "n": 16
+        },
+        "GRR": {
+          "community": 0,
+          "lat": 42.8808,
+          "lon": -85.5228,
+          "late_share": 0.5714,
+          "n": 7
+        },
+        "GSP": {
+          "community": 3,
+          "lat": 34.8957,
+          "lon": -82.2189,
+          "late_share": 0.3333,
+          "n": 3
+        },
+        "HDN": {
+          "community": 1,
+          "lat": 40.4812,
+          "lon": -107.2177,
+          "late_share": 0.3333,
+          "n": 3
+        },
+        "HNL": {
+          "community": 4,
+          "lat": 21.3187,
+          "lon": -157.9224,
+          "late_share": 0.3077,
+          "n": 13
+        },
+        "HOU": {
+          "community": 0,
+          "lat": 29.6454,
+          "lon": -95.2789,
+          "late_share": 0.8333,
+          "n": 6
+        },
+        "IAD": {
+          "community": 2,
+          "lat": 38.9445,
+          "lon": -77.4558,
+          "late_share": 0.7143,
+          "n": 7
+        },
+        "IAH": {
+          "community": 0,
+          "lat": 29.9805,
+          "lon": -95.3397,
+          "late_share": 0.9286,
+          "n": 14
+        },
+        "ICT": {
+          "community": 0,
+          "lat": 37.65,
+          "lon": -97.4331,
+          "late_share": 1.0,
+          "n": 3
+        },
+        "IND": {
+          "community": 0,
+          "lat": 39.7173,
+          "lon": -86.2944,
+          "late_share": 0.5833,
+          "n": 12
+        },
+        "ISP": {
+          "community": 2,
+          "lat": 40.7952,
+          "lon": -73.1002,
+          "late_share": 0.6667,
+          "n": 3
+        },
+        "JAX": {
+          "community": 3,
+          "lat": 30.4941,
+          "lon": -81.6879,
+          "late_share": 0.4,
+          "n": 5
+        },
+        "JFK": {
+          "community": 2,
+          "lat": 40.6398,
+          "lon": -73.7789,
+          "late_share": 0.5385,
+          "n": 13
+        },
+        "LAS": {
+          "community": 1,
+          "lat": 36.0804,
+          "lon": -115.1523,
+          "late_share": 0.5,
+          "n": 24
+        },
+        "LAX": {
+          "community": 1,
+          "lat": 33.9425,
+          "lon": -118.4081,
+          "late_share": 0.3,
+          "n": 20
+        },
+        "LGA": {
+          "community": 2,
+          "lat": 40.7772,
+          "lon": -73.8726,
+          "late_share": 0.6154,
+          "n": 26
+        },
+        "LGB": {
+          "community": 1,
+          "lat": 33.8177,
+          "lon": -118.1516,
+          "late_share": 0.6,
+          "n": 5
+        },
+        "MCI": {
+          "community": 0,
+          "lat": 39.2976,
+          "lon": -94.7139,
+          "late_share": 0.6667,
+          "n": 3
+        },
+        "MCO": {
+          "community": 3,
+          "lat": 28.4289,
+          "lon": -81.316,
+          "late_share": 0.65,
+          "n": 20
+        },
+        "MDW": {
+          "community": 0,
+          "lat": 41.786,
+          "lon": -87.7524,
+          "late_share": 0.3333,
+          "n": 3
+        },
+        "MEM": {
+          "community": 0,
+          "lat": 35.0424,
+          "lon": -89.9767,
+          "late_share": 1.0,
+          "n": 3
+        },
+        "MIA": {
+          "community": 3,
+          "lat": 25.7933,
+          "lon": -80.2906,
+          "late_share": 0.5714,
+          "n": 21
+        },
+        "MKE": {
+          "community": 0,
+          "lat": 42.9472,
+          "lon": -87.8966,
+          "late_share": 0.8,
+          "n": 5
+        },
+        "MSP": {
+          "community": 0,
+          "lat": 44.8806,
+          "lon": -93.2169,
+          "late_share": 0.6923,
+          "n": 13
+        },
+        "MSY": {
+          "community": 0,
+          "lat": 29.9934,
+          "lon": -90.258,
+          "late_share": 0.4286,
+          "n": 7
+        },
+        "MTJ": {
+          "community": 1,
+          "lat": 38.5089,
+          "lon": -107.8938,
+          "late_share": 1.0,
+          "n": 3
+        },
+        "OAK": {
+          "community": 1,
+          "lat": 37.7213,
+          "lon": -122.2207,
+          "late_share": 0.6,
+          "n": 5
+        },
+        "OGG": {
+          "community": 4,
+          "lat": 20.8987,
+          "lon": -156.4305,
+          "late_share": 0.1667,
+          "n": 6
+        },
+        "OMA": {
+          "community": 0,
+          "lat": 41.3025,
+          "lon": -95.8942,
+          "late_share": 1.0,
+          "n": 3
+        },
+        "ONT": {
+          "community": 1,
+          "lat": 34.056,
+          "lon": -117.6012,
+          "late_share": 0.0,
+          "n": 3
+        },
+        "ORD": {
+          "community": 0,
+          "lat": 41.9796,
+          "lon": -87.9045,
+          "late_share": 0.92,
+          "n": 25
+        },
+        "ORF": {
+          "community": 2,
+          "lat": 36.8946,
+          "lon": -76.2012,
+          "late_share": 0.0,
+          "n": 3
+        },
+        "PBI": {
+          "community": 3,
+          "lat": 26.6832,
+          "lon": -80.0956,
+          "late_share": 0.8,
+          "n": 5
+        },
+        "PDX": {
+          "community": 1,
+          "lat": 45.5887,
+          "lon": -122.5975,
+          "late_share": 0.6,
+          "n": 5
+        },
+        "PHL": {
+          "community": 2,
+          "lat": 39.872,
+          "lon": -75.2411,
+          "late_share": 0.2273,
+          "n": 22
+        },
+        "PHX": {
+          "community": 1,
+          "lat": 33.4342,
+          "lon": -112.0081,
+          "late_share": 0.3929,
+          "n": 28
+        },
+        "PIT": {
+          "community": 2,
+          "lat": 40.4915,
+          "lon": -80.2329,
+          "late_share": 0.7,
+          "n": 10
+        },
+        "PSP": {
+          "community": 1,
+          "lat": 33.8292,
+          "lon": -116.5063,
+          "late_share": 0.3333,
+          "n": 3
+        },
+        "PVD": {
+          "community": 2,
+          "lat": 41.724,
+          "lon": -71.4282,
+          "late_share": 0.6667,
+          "n": 3
+        },
+        "RDU": {
+          "community": 2,
+          "lat": 35.8776,
+          "lon": -78.7875,
+          "late_share": 0.4545,
+          "n": 11
+        },
+        "RIC": {
+          "community": 2,
+          "lat": 37.5052,
+          "lon": -77.3197,
+          "late_share": 0.5,
+          "n": 4
+        },
+        "RNO": {
+          "community": 1,
+          "lat": 39.4986,
+          "lon": -119.7681,
+          "late_share": 0.25,
+          "n": 4
+        },
+        "RSW": {
+          "community": 3,
+          "lat": 26.5362,
+          "lon": -81.7552,
+          "late_share": 1.0,
+          "n": 10
+        },
+        "SAN": {
+          "community": 1,
+          "lat": 32.7336,
+          "lon": -117.1897,
+          "late_share": 0.5714,
+          "n": 7
+        },
+        "SAT": {
+          "community": 0,
+          "lat": 29.5337,
+          "lon": -98.4698,
+          "late_share": 0.6667,
+          "n": 3
+        },
+        "SDF": {
+          "community": 0,
+          "lat": 38.1744,
+          "lon": -85.736,
+          "late_share": 0.3333,
+          "n": 3
+        },
+        "SEA": {
+          "community": 1,
+          "lat": 47.449,
+          "lon": -122.3093,
+          "late_share": 0.4167,
+          "n": 24
+        },
+        "SFO": {
+          "community": 1,
+          "lat": 37.619,
+          "lon": -122.3748,
+          "late_share": 0.5,
+          "n": 8
+        },
+        "SJC": {
+          "community": 1,
+          "lat": 37.3619,
+          "lon": -121.929,
+          "late_share": 0.4545,
+          "n": 11
+        },
+        "SJU": {
+          "community": 5,
+          "lat": 18.4394,
+          "lon": -66.0018,
+          "late_share": 0.8571,
+          "n": 7
+        },
+        "SLC": {
+          "community": 1,
+          "lat": 40.7884,
+          "lon": -111.9778,
+          "late_share": 0.6667,
+          "n": 15
+        },
+        "SMF": {
+          "community": 1,
+          "lat": 38.6954,
+          "lon": -121.5908,
+          "late_share": 0.2857,
+          "n": 7
+        },
+        "SNA": {
+          "community": 1,
+          "lat": 33.6757,
+          "lon": -117.8682,
+          "late_share": 0.25,
+          "n": 4
+        },
+        "STL": {
+          "community": 0,
+          "lat": 38.7477,
+          "lon": -90.36,
+          "late_share": 0.5,
+          "n": 6
+        },
+        "TPA": {
+          "community": 3,
+          "lat": 27.9755,
+          "lon": -82.5333,
+          "late_share": 0.5556,
+          "n": 9
+        },
+        "TUS": {
+          "community": 1,
+          "lat": 32.1161,
+          "lon": -110.941,
+          "late_share": 0.3333,
+          "n": 3
+        },
+        "XNA": {
+          "community": 0,
+          "lat": 36.2819,
+          "lon": -94.3068,
+          "late_share": 0.6,
+          "n": 5
+        }
+      }
+    },
+    "routing": {
+      "cases": 159,
+      "baseline_top1_held": 0.8491,
+      "community_top1_held": 0.8994,
+      "oracle_any_held": 1.0,
+      "cases_changed": 24,
+      "cases_unchanged": 135,
+      "changed_baseline_held": 0.5,
+      "changed_community_held": 0.8333,
+      "changed_better": 11,
+      "changed_worse": 3,
+      "changed_neutral": 10
+    },
+    "penalty_sweep": {
+      "0.00": {
+        "top1_held": 0.8491,
+        "changed": 0
+      },
+      "0.05": {
+        "top1_held": 0.8742,
+        "changed": 8
+      },
+      "0.10": {
+        "top1_held": 0.8805,
+        "changed": 17
+      },
+      "0.25": {
+        "top1_held": 0.8994,
+        "changed": 24
+      },
+      "0.50": {
+        "top1_held": 0.8994,
+        "changed": 24
+      },
+      "1.00": {
+        "top1_held": 0.8994,
+        "changed": 24
+      }
+    }
+  },
   "calm": {
     "day": "2024-10-29",
     "algorithms": {
