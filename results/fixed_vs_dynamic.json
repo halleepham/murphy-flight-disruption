@@ -1,0 +1,62 @@
+{
+  "weather": {
+    "day": "2024-01-15",
+    "fixed_regions": 8,
+    "agreement_fixed_vs_dynamic": 0.9211,
+    "dynamic": {
+      "cases": 81,
+      "top1_held": 0.716,
+      "changed": 28,
+      "better": 7,
+      "worse": 2
+    },
+    "baseline_top1_held": 0.6543,
+    "fixed": {
+      "cases": 81,
+      "top1_held": 0.8025,
+      "changed": 38,
+      "better": 14,
+      "worse": 2
+    }
+  },
+  "storm": {
+    "day": "2024-07-19",
+    "fixed_regions": 7,
+    "agreement_fixed_vs_dynamic": 0.9069,
+    "dynamic": {
+      "cases": 105,
+      "top1_held": 0.7619,
+      "changed": 62,
+      "better": 10,
+      "worse": 9
+    },
+    "baseline_top1_held": 0.7524,
+    "fixed": {
+      "cases": 105,
+      "top1_held": 0.8,
+      "changed": 64,
+      "better": 13,
+      "worse": 8
+    }
+  },
+  "calm": {
+    "day": "2024-10-29",
+    "fixed_regions": 8,
+    "agreement_fixed_vs_dynamic": 0.9365,
+    "dynamic": {
+      "cases": 103,
+      "top1_held": 1.0,
+      "changed": 37,
+      "better": 1,
+      "worse": 0
+    },
+    "baseline_top1_held": 0.9903,
+    "fixed": {
+      "cases": 103,
+      "top1_held": 1.0,
+      "changed": 24,
+      "better": 1,
+      "worse": 0
+    }
+  }
+}

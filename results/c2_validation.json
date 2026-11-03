@@ -1,0 +1,27 @@
+{
+  "control": "pairs from the same airport-hour are excluded, because the airport-hour node makes them same-community by construction",
+  "storm": {
+    "day": "2024-07-19",
+    "flights_in_graph": 17697,
+    "communities": 31,
+    "largest_community_share": 0.0891,
+    "same_community_pairs": 21031,
+    "same_community_both_fail": 0.3802,
+    "diff_community_pairs": 378969,
+    "diff_community_both_fail": 0.3851,
+    "lift": -0.0049,
+    "null_lift": -0.003
+  },
+  "calm": {
+    "day": "2024-10-29",
+    "flights_in_graph": 17608,
+    "communities": 25,
+    "largest_community_share": 0.082,
+    "same_community_pairs": 21089,
+    "same_community_both_fail": 0.0072,
+    "diff_community_pairs": 378911,
+    "diff_community_both_fail": 0.0066,
+    "lift": 0.0006,
+    "null_lift": -0.0009
+  }
+}

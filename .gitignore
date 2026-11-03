@@ -42,3 +42,6 @@ challenge3_ai_design.pptx
 
 # macOS
 .DS_Store
+
+# Co-Design app: traveller feedback written at runtime
+results/codesign/feedback.jsonl

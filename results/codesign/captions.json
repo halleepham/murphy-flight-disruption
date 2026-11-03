@@ -1,0 +1,174 @@
+{
+ "weather": [
+  {
+   "hour": "11:00Z",
+   "kind": "alarm",
+   "text": "At 11:00 UTC an alarm flagged 27% of airports, with 15 of 56 airports delayed unusually, including GRR, ORD, DTW and ROC.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "11:00Z",
+    "kind": "alarm",
+    "share_flagged_pct": 27,
+    "airports_flagged": 15,
+    "airports_scored": 56,
+    "most_unusual": [
+     "GRR",
+     "ORD",
+     "DTW",
+     "ROC"
+    ],
+    "i": 4
+   }
+  },
+  {
+   "hour": "17:00Z",
+   "kind": "worst_hour",
+   "text": "At 17:00 UTC the worst hour, 29 of 74 airports were flagged, and in one group of nearby airports 10 of 15 were flagged, such as BNA, GRR, MSN, ORD.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "17:00Z",
+    "kind": "worst_hour",
+    "airports_flagged": 29,
+    "airports_scored": 74,
+    "region": 2,
+    "region_flagged": 10,
+    "region_airports": 15,
+    "region_examples": [
+     "BNA",
+     "GRR",
+     "MSN",
+     "ORD"
+    ],
+    "i": 10
+   }
+  },
+  {
+   "hour": "04:00Z",
+   "kind": "peak_lateness",
+   "text": "At 04:00 UTC peak lateness shows 77% of departures left 15+ minutes late, occurring 17 hours after the alarm.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "04:00Z",
+    "kind": "peak_lateness",
+    "mean_late_pct": 77,
+    "lead_hours_after_alarm": 17,
+    "i": 21
+   }
+  }
+ ],
+ "storm": [
+  {
+   "hour": "10:00Z",
+   "kind": "alarm",
+   "text": "At 10:00 UTC, 41 airports (89% of those scored) are flagged as unusually delayed, including TPA, DTW, IND, and PIT.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "10:00Z",
+    "kind": "alarm",
+    "share_flagged_pct": 89,
+    "airports_flagged": 41,
+    "airports_scored": 46,
+    "most_unusual": [
+     "TPA",
+     "DTW",
+     "IND",
+     "PIT"
+    ],
+    "i": 1
+   }
+  },
+  {
+   "hour": "14:00Z",
+   "kind": "worst_hour",
+   "text": "At 14:00 UTC, the worst hour, 61 of 80 airports are flagged, with one group of nearby airports having 20 of 27 flagged, e.g., MEM, XNA, CMH, CVG.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "14:00Z",
+    "kind": "worst_hour",
+    "airports_flagged": 61,
+    "airports_scored": 80,
+    "region": 0,
+    "region_flagged": 20,
+    "region_airports": 27,
+    "region_examples": [
+     "MEM",
+     "XNA",
+     "CMH",
+     "CVG"
+    ],
+    "i": 5
+   }
+  },
+  {
+   "hour": "04:00Z",
+   "kind": "peak_lateness",
+   "text": "At 04:00 UTC, departures were 82% late by 15+ minutes, the highest lateness, occurring 18 hours after the earlier alarm.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "04:00Z",
+    "kind": "peak_lateness",
+    "mean_late_pct": 82,
+    "lead_hours_after_alarm": 18,
+    "i": 19
+   }
+  }
+ ],
+ "calm": [
+  {
+   "hour": "09:00Z",
+   "kind": "no_alarm",
+   "text": "At 09:00 UTC there were no abnormal airport delays.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "09:00Z",
+    "kind": "no_alarm",
+    "max_share_flagged_pct": 24,
+    "i": 2
+   }
+  },
+  {
+   "hour": "10:00Z",
+   "kind": "worst_hour",
+   "text": "At 10:00 UTC the worst hour, 18 of 76 airports were flagged abnormal; one group of nearby airports had 6 of its 19 airports flagged.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "10:00Z",
+    "kind": "worst_hour",
+    "airports_flagged": 18,
+    "airports_scored": 76,
+    "region": 3,
+    "region_flagged": 6,
+    "region_airports": 19,
+    "region_examples": [
+     "CID",
+     "GRR",
+     "IND",
+     "CVG"
+    ],
+    "i": 3
+   }
+  },
+  {
+   "hour": "22:00Z",
+   "kind": "peak_lateness",
+   "text": "At 22:00 UTC peak lateness, 13% of departures left 15 minutes or more late.",
+   "source": "llm",
+   "rejected": null,
+   "facts": {
+    "hour": "22:00Z",
+    "kind": "peak_lateness",
+    "mean_late_pct": 13,
+    "lead_hours_after_alarm": null,
+    "i": 15
+   }
+  }
+ ]
+}

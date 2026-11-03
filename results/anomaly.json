@@ -1,0 +1,518 @@
+{
+  "config": {
+    "baseline_year": 2023,
+    "z_flag": 3.0,
+    "min_flights": 3
+  },
+  "baseline_slots": 1999,
+  "storm": {
+    "day": "2024-07-19",
+    "airport_hours_scored": 1345,
+    "robust_z": {
+      "flagged": 447,
+      "share_flagged": 0.3323,
+      "median_z": 1.948
+    },
+    "isolation_forest": {
+      "flagged": 68,
+      "share_flagged": 0.0506
+    },
+    "lead_time": {
+      "alarm_threshold": 0.25,
+      "first_alarm": "10:00Z",
+      "peak_lateness": "04:00Z",
+      "lead_hours": 18.0
+    },
+    "hourly": [
+      {
+        "hour": "2024-07-19 10",
+        "label": "10",
+        "scored": 46,
+        "flagged": 41,
+        "share_flagged": 0.8913,
+        "mean_late": 0.527
+      },
+      {
+        "hour": "2024-07-19 11",
+        "label": "11",
+        "scored": 60,
+        "flagged": 40,
+        "share_flagged": 0.6667,
+        "mean_late": 0.4738
+      },
+      {
+        "hour": "2024-07-19 12",
+        "label": "12",
+        "scored": 67,
+        "flagged": 38,
+        "share_flagged": 0.5672,
+        "mean_late": 0.4434
+      },
+      {
+        "hour": "2024-07-19 13",
+        "label": "13",
+        "scored": 74,
+        "flagged": 44,
+        "share_flagged": 0.5946,
+        "mean_late": 0.5523
+      },
+      {
+        "hour": "2024-07-19 14",
+        "label": "14",
+        "scored": 80,
+        "flagged": 61,
+        "share_flagged": 0.7625,
+        "mean_late": 0.648
+      },
+      {
+        "hour": "2024-07-19 15",
+        "label": "15",
+        "scored": 77,
+        "flagged": 48,
+        "share_flagged": 0.6234,
+        "mean_late": 0.5806
+      },
+      {
+        "hour": "2024-07-19 16",
+        "label": "16",
+        "scored": 68,
+        "flagged": 30,
+        "share_flagged": 0.4412,
+        "mean_late": 0.586
+      },
+      {
+        "hour": "2024-07-19 17",
+        "label": "17",
+        "scored": 74,
+        "flagged": 30,
+        "share_flagged": 0.4054,
+        "mean_late": 0.5317
+      },
+      {
+        "hour": "2024-07-19 18",
+        "label": "18",
+        "scored": 79,
+        "flagged": 17,
+        "share_flagged": 0.2152,
+        "mean_late": 0.5672
+      },
+      {
+        "hour": "2024-07-19 19",
+        "label": "19",
+        "scored": 72,
+        "flagged": 22,
+        "share_flagged": 0.3056,
+        "mean_late": 0.6076
+      },
+      {
+        "hour": "2024-07-19 20",
+        "label": "20",
+        "scored": 81,
+        "flagged": 13,
+        "share_flagged": 0.1605,
+        "mean_late": 0.5966
+      },
+      {
+        "hour": "2024-07-19 21",
+        "label": "21",
+        "scored": 82,
+        "flagged": 14,
+        "share_flagged": 0.1707,
+        "mean_late": 0.6309
+      },
+      {
+        "hour": "2024-07-19 22",
+        "label": "22",
+        "scored": 78,
+        "flagged": 10,
+        "share_flagged": 0.1282,
+        "mean_late": 0.622
+      },
+      {
+        "hour": "2024-07-19 23",
+        "label": "23",
+        "scored": 84,
+        "flagged": 14,
+        "share_flagged": 0.1667,
+        "mean_late": 0.6163
+      },
+      {
+        "hour": "2024-07-20 00",
+        "label": "00",
+        "scored": 74,
+        "flagged": 5,
+        "share_flagged": 0.0676,
+        "mean_late": 0.6556
+      },
+      {
+        "hour": "2024-07-20 01",
+        "label": "01",
+        "scored": 62,
+        "flagged": 4,
+        "share_flagged": 0.0645,
+        "mean_late": 0.694
+      },
+      {
+        "hour": "2024-07-20 02",
+        "label": "02",
+        "scored": 51,
+        "flagged": 5,
+        "share_flagged": 0.098,
+        "mean_late": 0.704
+      },
+      {
+        "hour": "2024-07-20 03",
+        "label": "03",
+        "scored": 43,
+        "flagged": 1,
+        "share_flagged": 0.0233,
+        "mean_late": 0.6844
+      },
+      {
+        "hour": "2024-07-20 04",
+        "label": "04",
+        "scored": 34,
+        "flagged": 1,
+        "share_flagged": 0.0294,
+        "mean_late": 0.7928
+      },
+      {
+        "hour": "2024-07-20 05",
+        "label": "05",
+        "scored": 21,
+        "flagged": 3,
+        "share_flagged": 0.1429,
+        "mean_late": 0.7813
+      },
+      {
+        "hour": "2024-07-20 06",
+        "label": "06",
+        "scored": 15,
+        "flagged": 2,
+        "share_flagged": 0.1333,
+        "mean_late": 0.5475
+      },
+      {
+        "hour": "2024-07-20 07",
+        "label": "07",
+        "scored": 10,
+        "flagged": 2,
+        "share_flagged": 0.2,
+        "mean_late": 0.7379
+      }
+    ],
+    "top_anomalies": [
+      {
+        "airport": "IAD",
+        "hour": "16:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 22.9,
+        "n": 10
+      },
+      {
+        "airport": "TPA",
+        "hour": "10:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 22.9,
+        "n": 10
+      },
+      {
+        "airport": "PIT",
+        "hour": "12:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 21.6,
+        "n": 8
+      },
+      {
+        "airport": "PIT",
+        "hour": "13:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 21.6,
+        "n": 8
+      },
+      {
+        "airport": "XNA",
+        "hour": "14:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 20.7,
+        "n": 7
+      },
+      {
+        "airport": "CMH",
+        "hour": "14:00Z",
+        "late_share": 0.9,
+        "usual": 0.0,
+        "z": 20.6,
+        "n": 10
+      },
+      {
+        "airport": "CVG",
+        "hour": "14:00Z",
+        "late_share": 0.9,
+        "usual": 0.0,
+        "z": 20.6,
+        "n": 10
+      },
+      {
+        "airport": "SDF",
+        "hour": "15:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 19.7,
+        "n": 6
+      }
+    ]
+  },
+  "calm": {
+    "day": "2024-10-29",
+    "airport_hours_scored": 1291,
+    "robust_z": {
+      "flagged": 74,
+      "share_flagged": 0.0573,
+      "median_z": -0.357
+    },
+    "isolation_forest": {
+      "flagged": 65,
+      "share_flagged": 0.0503
+    },
+    "lead_time": {
+      "alarm_threshold": 0.25,
+      "first_alarm": null,
+      "peak_lateness": "03:00Z",
+      "lead_hours": null
+    },
+    "hourly": [
+      {
+        "hour": "2024-10-29 09",
+        "label": "09",
+        "scored": 35,
+        "flagged": 1,
+        "share_flagged": 0.0286,
+        "mean_late": 0.0048
+      },
+      {
+        "hour": "2024-10-29 10",
+        "label": "10",
+        "scored": 76,
+        "flagged": 18,
+        "share_flagged": 0.2368,
+        "mean_late": 0.0878
+      },
+      {
+        "hour": "2024-10-29 11",
+        "label": "11",
+        "scored": 71,
+        "flagged": 6,
+        "share_flagged": 0.0845,
+        "mean_late": 0.0386
+      },
+      {
+        "hour": "2024-10-29 12",
+        "label": "12",
+        "scored": 82,
+        "flagged": 7,
+        "share_flagged": 0.0854,
+        "mean_late": 0.0473
+      },
+      {
+        "hour": "2024-10-29 13",
+        "label": "13",
+        "scored": 70,
+        "flagged": 8,
+        "share_flagged": 0.1143,
+        "mean_late": 0.0639
+      },
+      {
+        "hour": "2024-10-29 14",
+        "label": "14",
+        "scored": 67,
+        "flagged": 5,
+        "share_flagged": 0.0746,
+        "mean_late": 0.0716
+      },
+      {
+        "hour": "2024-10-29 15",
+        "label": "15",
+        "scored": 83,
+        "flagged": 7,
+        "share_flagged": 0.0843,
+        "mean_late": 0.0763
+      },
+      {
+        "hour": "2024-10-29 16",
+        "label": "16",
+        "scored": 83,
+        "flagged": 6,
+        "share_flagged": 0.0723,
+        "mean_late": 0.0657
+      },
+      {
+        "hour": "2024-10-29 17",
+        "label": "17",
+        "scored": 74,
+        "flagged": 1,
+        "share_flagged": 0.0135,
+        "mean_late": 0.0609
+      },
+      {
+        "hour": "2024-10-29 18",
+        "label": "18",
+        "scored": 80,
+        "flagged": 3,
+        "share_flagged": 0.0375,
+        "mean_late": 0.076
+      },
+      {
+        "hour": "2024-10-29 19",
+        "label": "19",
+        "scored": 76,
+        "flagged": 2,
+        "share_flagged": 0.0263,
+        "mean_late": 0.07
+      },
+      {
+        "hour": "2024-10-29 20",
+        "label": "20",
+        "scored": 91,
+        "flagged": 3,
+        "share_flagged": 0.033,
+        "mean_late": 0.0883
+      },
+      {
+        "hour": "2024-10-29 21",
+        "label": "21",
+        "scored": 86,
+        "flagged": 2,
+        "share_flagged": 0.0233,
+        "mean_late": 0.0927
+      },
+      {
+        "hour": "2024-10-29 22",
+        "label": "22",
+        "scored": 78,
+        "flagged": 3,
+        "share_flagged": 0.0385,
+        "mean_late": 0.133
+      },
+      {
+        "hour": "2024-10-29 23",
+        "label": "23",
+        "scored": 68,
+        "flagged": 0,
+        "share_flagged": 0.0,
+        "mean_late": 0.0846
+      },
+      {
+        "hour": "2024-10-30 00",
+        "label": "00",
+        "scored": 49,
+        "flagged": 0,
+        "share_flagged": 0.0,
+        "mean_late": 0.0977
+      },
+      {
+        "hour": "2024-10-30 01",
+        "label": "01",
+        "scored": 42,
+        "flagged": 0,
+        "share_flagged": 0.0,
+        "mean_late": 0.1161
+      },
+      {
+        "hour": "2024-10-30 02",
+        "label": "02",
+        "scored": 30,
+        "flagged": 0,
+        "share_flagged": 0.0,
+        "mean_late": 0.1232
+      },
+      {
+        "hour": "2024-10-30 03",
+        "label": "03",
+        "scored": 15,
+        "flagged": 0,
+        "share_flagged": 0.0,
+        "mean_late": 0.2499
+      },
+      {
+        "hour": "2024-10-30 05",
+        "label": "05",
+        "scored": 10,
+        "flagged": 0,
+        "share_flagged": 0.0,
+        "mean_late": 0.056
+      }
+    ],
+    "top_anomalies": [
+      {
+        "airport": "ANC",
+        "hour": "15:00Z",
+        "late_share": 1.0,
+        "usual": 0.0,
+        "z": 15.4,
+        "n": 3
+      },
+      {
+        "airport": "ANC",
+        "hour": "14:00Z",
+        "late_share": 0.667,
+        "usual": 0.0,
+        "z": 10.2,
+        "n": 3
+      },
+      {
+        "airport": "JAX",
+        "hour": "10:00Z",
+        "late_share": 0.429,
+        "usual": 0.0,
+        "z": 8.9,
+        "n": 7
+      },
+      {
+        "airport": "BGR",
+        "hour": "16:00Z",
+        "late_share": 0.5,
+        "usual": 0.0,
+        "z": 8.6,
+        "n": 4
+      },
+      {
+        "airport": "FAT",
+        "hour": "14:00Z",
+        "late_share": 0.5,
+        "usual": 0.0,
+        "z": 8.6,
+        "n": 4
+      },
+      {
+        "airport": "ALB",
+        "hour": "10:00Z",
+        "late_share": 0.4,
+        "usual": 0.0,
+        "z": 7.4,
+        "n": 5
+      },
+      {
+        "airport": "KOA",
+        "hour": "22:00Z",
+        "late_share": 0.4,
+        "usual": 0.0,
+        "z": 7.4,
+        "n": 5
+      },
+      {
+        "airport": "IND",
+        "hour": "10:00Z",
+        "late_share": 0.286,
+        "usual": 0.0,
+        "z": 7.1,
+        "n": 14
+      }
+    ]
+  }
+}
