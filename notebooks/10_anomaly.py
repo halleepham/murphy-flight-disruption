@@ -7,6 +7,8 @@ Run:  PYTHONPATH=src .venv/bin/python notebooks/10_anomaly.py
 
 from __future__ import annotations
 
+import datetime as _dt
+UTC = _dt.timezone.utc  # DuckDB returns session-zone (Central) instants; label in UTC (A25)
 import json
 import pathlib
 import warnings
@@ -50,13 +52,13 @@ def main() -> None:
             # A list, in true chronological order. Keying by "%H" collapsed the
             # UTC day boundary -- a storm day runs 05:00Z to 02:00Z the next day, and
             # string-sorting put those closing hours at the front of the chart.
-            "hourly": [{"hour": f"{h:%Y-%m-%d %H}", "label": f"{h:%H}",
+            "hourly": [{"hour": f"{h.astimezone(UTC):%Y-%m-%d %H}", "label": f"{h.astimezone(UTC):%H}",
                         "scored": v["scored"], "flagged": v["flagged"],
                         "share_flagged": round(v["share_flagged"], 4),
                         "mean_late": round(v["mean_late"], 4)}
                        for h, v in sorted(sig.items())],
             "top_anomalies": [
-                {"airport": r["airport"], "hour": f"{r['hour']:%H}:00Z",
+                {"airport": r["airport"], "hour": f"{r['hour'].astimezone(UTC):%H}:00Z",
                  "late_share": round(r["late_share"], 3),
                  "usual": round(r["median"], 3), "z": round(r["z"], 1), "n": r["n"]}
                 for r in sorted(rows, key=lambda r: -r["z"])[:8]],

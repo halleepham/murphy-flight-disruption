@@ -312,8 +312,17 @@ def _risk_before(state, ap, hour):
 
 
 def build_itineraries(flights, state, communities_by_hour, origin, dest, after_hour,
-                      xy=None):
-    """Direct and one-stop options leaving `origin` after `after_hour`."""
+                      xy=None, same_carrier=True):
+    """Direct and one-stop options leaving `origin` after `after_hour`.
+
+    `after_hour` is also the DECISION time. Every observed quantity is read as of the
+    last complete hour before it (A24): an earlier version read each leg's risk from
+    the hour before that leg departed, which for a second leg or a later flight is
+    information the traveller does not yet have.
+
+    `same_carrier`: both legs of a connection on one operating carrier (S6). Mixing
+    carriers produced bookings like UA + WN that no single ticket would contain.
+    """
     xy = xy if xy is not None else coords()
     direct_km = (great_circle_km(origin, dest, xy)
                  if origin in xy and dest in xy else None)
@@ -331,6 +340,8 @@ def build_itineraries(flights, state, communities_by_hour, origin, dest, after_h
         for g in into_d:
             if g["origin"] != f["dest"] or g["dep_utc"] <= f["arr_utc"]:
                 continue
+            if same_carrier and g["carrier"] != f["carrier"]:
+                continue
             gap = (g["dep_utc"] - f["arr_utc"]).total_seconds() / 60.0
             if not (MCT_MIN <= gap <= MAX_CONNECT_MIN):
                 continue
@@ -344,7 +355,8 @@ def build_itineraries(flights, state, communities_by_hour, origin, dest, after_h
 
     scored = []
     for o in options:
-        risks = [_risk_before(state, l["origin"], l["sched_dep_hour"]) for l in o["legs"]]
+        risks = [_risk_before(state, l["origin"], min(l["sched_dep_hour"], after_hour))
+                 for l in o["legs"]]
         if any(r is None for r in risks):
             continue
         base = float(np.mean(risks))
@@ -357,7 +369,7 @@ def build_itineraries(flights, state, communities_by_hour, origin, dest, after_h
         # ends -- after the traveller has had to decide. Reading it by scheduled hour
         # was a leak of exactly the kind the STGNN work found (T11).
         same_comm = False
-        h = o["legs"][0]["sched_dep_hour"] - dt.timedelta(hours=1)
+        h = min(o["legs"][0]["sched_dep_hour"], after_hour) - dt.timedelta(hours=1)
         comm = communities_by_hour.get(h, {})
         if o["hub"] and origin in comm and o["hub"] in comm:
             same_comm = comm[origin] == comm[o["hub"]]

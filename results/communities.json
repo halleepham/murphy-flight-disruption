@@ -654,42 +654,42 @@
       }
     },
     "routing": {
-      "cases": 201,
-      "baseline_top1_held": 0.796,
-      "community_top1_held": 0.8259,
+      "cases": 105,
+      "baseline_top1_held": 0.7524,
+      "community_top1_held": 0.7619,
       "oracle_any_held": 1.0,
-      "cases_changed": 47,
-      "cases_unchanged": 154,
-      "changed_baseline_held": 0.7872,
-      "changed_community_held": 0.9149,
-      "changed_better": 8,
-      "changed_worse": 2,
-      "changed_neutral": 37
+      "cases_changed": 62,
+      "cases_unchanged": 43,
+      "changed_baseline_held": 0.7581,
+      "changed_community_held": 0.7742,
+      "changed_better": 10,
+      "changed_worse": 9,
+      "changed_neutral": 43
     },
     "penalty_sweep": {
       "0.00": {
-        "top1_held": 0.796,
+        "top1_held": 0.7524,
         "changed": 0
       },
       "0.05": {
-        "top1_held": 0.8109,
-        "changed": 28
+        "top1_held": 0.7619,
+        "changed": 18
       },
       "0.10": {
-        "top1_held": 0.8159,
-        "changed": 37
+        "top1_held": 0.7714,
+        "changed": 29
       },
       "0.25": {
-        "top1_held": 0.8259,
-        "changed": 47
+        "top1_held": 0.7619,
+        "changed": 62
       },
       "0.50": {
-        "top1_held": 0.8259,
-        "changed": 47
+        "top1_held": 0.7524,
+        "changed": 66
       },
       "1.00": {
-        "top1_held": 0.8259,
-        "changed": 47
+        "top1_held": 0.7524,
+        "changed": 66
       }
     }
   },
@@ -1307,42 +1307,42 @@
       }
     },
     "routing": {
-      "cases": 159,
-      "baseline_top1_held": 0.8491,
-      "community_top1_held": 0.8994,
+      "cases": 81,
+      "baseline_top1_held": 0.6543,
+      "community_top1_held": 0.716,
       "oracle_any_held": 1.0,
-      "cases_changed": 24,
-      "cases_unchanged": 135,
-      "changed_baseline_held": 0.5,
-      "changed_community_held": 0.8333,
-      "changed_better": 11,
-      "changed_worse": 3,
-      "changed_neutral": 10
+      "cases_changed": 28,
+      "cases_unchanged": 53,
+      "changed_baseline_held": 0.6786,
+      "changed_community_held": 0.8571,
+      "changed_better": 7,
+      "changed_worse": 2,
+      "changed_neutral": 19
     },
     "penalty_sweep": {
       "0.00": {
-        "top1_held": 0.8491,
+        "top1_held": 0.6543,
         "changed": 0
       },
       "0.05": {
-        "top1_held": 0.8742,
-        "changed": 8
+        "top1_held": 0.679,
+        "changed": 13
       },
       "0.10": {
-        "top1_held": 0.8805,
+        "top1_held": 0.679,
         "changed": 17
       },
       "0.25": {
-        "top1_held": 0.8994,
-        "changed": 24
+        "top1_held": 0.716,
+        "changed": 28
       },
       "0.50": {
-        "top1_held": 0.8994,
-        "changed": 24
+        "top1_held": 0.7901,
+        "changed": 34
       },
       "1.00": {
-        "top1_held": 0.8994,
-        "changed": 24
+        "top1_held": 0.7901,
+        "changed": 34
       }
     }
   },
@@ -2037,42 +2037,42 @@
       }
     },
     "routing": {
-      "cases": 184,
-      "baseline_top1_held": 0.9837,
-      "community_top1_held": 0.9891,
+      "cases": 103,
+      "baseline_top1_held": 0.9903,
+      "community_top1_held": 1.0,
       "oracle_any_held": 1.0,
-      "cases_changed": 24,
-      "cases_unchanged": 160,
-      "changed_baseline_held": 0.9583,
+      "cases_changed": 37,
+      "cases_unchanged": 66,
+      "changed_baseline_held": 0.973,
       "changed_community_held": 1.0,
       "changed_better": 1,
       "changed_worse": 0,
-      "changed_neutral": 23
+      "changed_neutral": 36
     },
     "penalty_sweep": {
       "0.00": {
-        "top1_held": 0.9837,
+        "top1_held": 0.9903,
         "changed": 0
       },
       "0.05": {
-        "top1_held": 0.9837,
-        "changed": 20
+        "top1_held": 1.0,
+        "changed": 32
       },
       "0.10": {
-        "top1_held": 0.9891,
-        "changed": 24
+        "top1_held": 1.0,
+        "changed": 37
       },
       "0.25": {
-        "top1_held": 0.9891,
-        "changed": 24
+        "top1_held": 1.0,
+        "changed": 37
       },
       "0.50": {
-        "top1_held": 0.9891,
-        "changed": 24
+        "top1_held": 1.0,
+        "changed": 37
       },
       "1.00": {
-        "top1_held": 0.9891,
-        "changed": 24
+        "top1_held": 1.0,
+        "changed": 37
       }
     }
   }

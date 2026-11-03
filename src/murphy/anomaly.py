@@ -143,8 +143,8 @@ def lead_time(signal: dict, alarm: float = 0.25) -> dict:
     first = next((h for h in hours if signal[h]["share_flagged"] >= alarm), None)
     peak = max(hours, key=lambda h: signal[h]["mean_late"])
     return {"alarm_threshold": alarm,
-            "first_alarm": f"{first:%H}:00Z" if first else None,
-            "peak_lateness": f"{peak:%H}:00Z",
+            "first_alarm": f"{first.astimezone(dt.timezone.utc):%H}:00Z" if first else None,
+            "peak_lateness": f"{peak.astimezone(dt.timezone.utc):%H}:00Z",
             "lead_hours": (peak - first).total_seconds() / 3600 if first else None}
 
 
@@ -165,7 +165,7 @@ if __name__ == "__main__":
               f"({100*sum(iso)/len(iso):5.1f}%)")
         top = sorted(rows, key=lambda r: -r["z"])[:5]
         for r in top:
-            print(f"     {r['airport']} {r['hour']:%H}:00Z  late {r['late_share']:.2f} "
+            print(f"     {r['airport']} {r['hour'].astimezone(dt.timezone.utc):%H}:00Z  late {r['late_share']:.2f} "
                   f"vs usual {r['median']:.2f}   z {r['z']:+.1f}  n={r['n']}")
         sig = national_signal(rows)
         lt = lead_time(sig)
