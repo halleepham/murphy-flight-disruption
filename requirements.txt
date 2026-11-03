@@ -1,5 +1,7 @@
 # Application runtime
 streamlit
+fastapi      # Challenge 4 Co-Design web app (app/web)
+uvicorn
 duckdb
 pyarrow
 # Pinned <2 for the GNN work: PyTorch dropped x86_64 macOS builds after 2.2.2, and

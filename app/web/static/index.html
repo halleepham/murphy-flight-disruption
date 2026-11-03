@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murphy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#" data-go="home"><span class="mark">M</span> Murphy</a>
+  <nav>
+    <a href="#" data-go="home">Check a trip</a>
+    <a href="#" data-go="replay">Watch a day</a>
+  </nav>
+</header>
+
+<!-- ============ 1. TRIP INPUT ============ -->
+<main id="view-home" class="view">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Flight disruption, before the airline tells you</p>
+      <h1>Will my trip hold?</h1>
+      <p class="lede">Murphy checks your booked flights against what the whole network is
+        doing right now — and tells you when not to trust its own forecast.</p>
+    </div>
+    <form id="trip-form" class="card booking">
+      <div class="row2">
+        <label>From<select id="f-origin"></select></label>
+        <label>To<select id="f-dest"></select></label>
+      </div>
+      <label>Date<select id="f-day"></select></label>
+      <label>Your booked flights<select id="f-booked"></select></label>
+      <label>I need to arrive by
+        <select id="f-deadline">
+          <option value="">No hard deadline</option>
+          <option value="0">On schedule</option>
+          <option value="30">Within 30 min of schedule</option>
+          <option value="60" selected>Within 1 hour of schedule</option>
+          <option value="120">Within 2 hours of schedule</option>
+        </select>
+      </label>
+      <p class="fine" id="f-checking"></p>
+      <button type="submit" class="btn primary">Check my trip</button>
+      <p class="fine">Sample trips only: Murphy is replaying three real days of 2024 from
+        BTS records, so it can only check flights that flew on them.</p>
+    </form>
+  </section>
+  <section class="days" id="day-cards"></section>
+</main>
+
+<!-- ============ 2. YOUR TRIP ============ -->
+<main id="view-trip" class="view" hidden>
+  <div id="banner" class="banner"></div>
+  <div class="trip-grid">
+    <div class="col-left">
+      <div class="card verdict" id="verdict"></div>
+      <div class="card" id="strip"></div>
+      <div class="card" id="band"></div>
+    </div>
+    <div class="col-right">
+      <div class="card map-card">
+        <div class="map-head">
+          <h3>Your options</h3>
+          <label class="toggle"><input type="checkbox" id="t-regions" checked> Show airport groups</label>
+          <label class="toggle"><input type="checkbox" id="t-hindsight"> Reveal what happened</label>
+        </div>
+        <div id="routemap" class="map"></div>
+        <p class="fine legend">
+          <span><span class="sw same"></span>connects inside your origin's group — tends to fail with it</span>
+          <span><span class="sw diff"></span>leaves the group, or flies direct</span>
+          <span>Dashed: your booking · thick: Murphy's pick · hover or click a line</span>
+        </p>
+      </div>
+      <div class="card" id="options"></div>
+    </div>
+  </div>
+  <div class="tabs card">
+    <div class="tab-bar">
+      <button class="tab on" data-tab="why">Why is this risky?</button>
+      <button class="tab" data-tab="owed">What am I owed?</button>
+      <button class="tab" data-tab="log">My feedback</button>
+    </div>
+    <div class="tab-body" id="tab-why"></div>
+    <div class="tab-body" id="tab-owed" hidden></div>
+    <div class="tab-body" id="tab-log" hidden></div>
+  </div>
+  <footer class="prov" id="prov"></footer>
+</main>
+
+<!-- ============ 3. DAY REPLAY ============ -->
+<main id="view-replay" class="view" hidden>
+  <div class="replay-head">
+    <div>
+      <p class="eyebrow">Replay</p>
+      <h2 id="r-title">Watch a day unfold</h2>
+    </div>
+    <div class="seg" id="r-days"></div>
+  </div>
+  <div class="replay-grid">
+    <div class="card map-card">
+      <div class="map-head">
+        <div class="clock" id="r-clock">--:--</div>
+        <label class="toggle"><input type="checkbox" id="r-groups"> Colour by group</label>
+      </div>
+      <div id="replaymap" class="map tall"></div>
+      <div class="scrub">
+        <button class="btn round" id="r-play" aria-label="Play">▶</button>
+        <div class="track" id="r-track"><input type="range" id="r-slider" min="0" max="0" value="0"></div>
+      </div>
+      <p class="fine legend">
+        <span><span class="dot ok"></span>normal for that hour</span>
+        <span><span class="dot warn"></span>unusually late (z ≥ 3)</span>
+        <span><span class="dot bad"></span>far outside its history (z ≥ 6)</span><span>size = departures</span>
+      </p>
+    </div>
+    <div class="col-right">
+      <div class="card caption" id="r-caption"></div>
+      <div class="card" id="r-stats"></div>
+      <div class="card" id="r-events"></div>
+    </div>
+  </div>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
