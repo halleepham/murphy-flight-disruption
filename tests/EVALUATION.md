@@ -116,6 +116,8 @@ traveller rank by them, rather than choosing on their behalf.
 - **Cancellation is excluded rather than modelled.** The data now contains
   cancelled flights, but the planner does not yet use historical cancellation
   rates when ranking. That is the obvious next improvement.
+- **All 15 carriers, and connections may change carrier.** This evaluation does not
+  apply the nine-carrier scope or the app's one-carrier connection rule.
 - **One month, ten routes.** Enough to see a consistent effect on connection
   reliability; not enough for a general claim.
 - **No fare data**, so cost never enters the ranking.

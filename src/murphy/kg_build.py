@@ -33,8 +33,9 @@ PARQUET = str(ROOT / "data" / "processed" / "flights" / "**" / "*.parquet")
 # existence of a service does not.
 MAJORS = ("AA", "DL", "UA", "WN", "AS", "B6", "F9", "G4", "HA")
 
-# 19 July 2024 is the CrowdStrike outage: 59.5% of mainline flights 15+ minutes late
-# against a 7.6% baseline. A real cascade that propagates through aircraft rotations
+# 19 July 2024 is the CrowdStrike outage: 58.2% of operated mainline flights arrived 15+
+# minutes late and 16.9% of flights were cancelled, against a median day's 19.7% late in
+# 2024. A real cascade that propagates through aircraft rotations
 # is what the graph exists to show.
 SEED_DAYS = ("2024-07-19",)
 
