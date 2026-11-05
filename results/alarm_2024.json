@@ -1,0 +1,217 @@
+{
+  "config": {
+    "alarm_share": 0.25,
+    "min_scored": 30,
+    "baseline_year": 2023,
+    "carriers": "all in the table"
+  },
+  "days_scored": 366,
+  "alarm_days_app_rule": 34,
+  "alarm_days_no_minimum": 39,
+  "alarms": [
+    {
+      "day": "2024-01-12",
+      "first_alarm_utc": "15:00Z",
+      "share_flagged": 0.3175,
+      "scored": 63
+    },
+    {
+      "day": "2024-01-14",
+      "first_alarm_utc": "13:00Z",
+      "share_flagged": 0.2576,
+      "scored": 66
+    },
+    {
+      "day": "2024-01-15",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2679,
+      "scored": 56
+    },
+    {
+      "day": "2024-01-16",
+      "first_alarm_utc": "12:00Z",
+      "share_flagged": 0.3396,
+      "scored": 53
+    },
+    {
+      "day": "2024-01-17",
+      "first_alarm_utc": "10:00Z",
+      "share_flagged": 0.3,
+      "scored": 30
+    },
+    {
+      "day": "2024-01-19",
+      "first_alarm_utc": "13:00Z",
+      "share_flagged": 0.3143,
+      "scored": 70
+    },
+    {
+      "day": "2024-03-09",
+      "first_alarm_utc": "15:00Z",
+      "share_flagged": 0.25,
+      "scored": 64
+    },
+    {
+      "day": "2024-03-10",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.25,
+      "scored": 64
+    },
+    {
+      "day": "2024-03-23",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.2542,
+      "scored": 59
+    },
+    {
+      "day": "2024-04-11",
+      "first_alarm_utc": "12:00Z",
+      "share_flagged": 0.25,
+      "scored": 76
+    },
+    {
+      "day": "2024-05-06",
+      "first_alarm_utc": "15:00Z",
+      "share_flagged": 0.25,
+      "scored": 80
+    },
+    {
+      "day": "2024-05-07",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.3,
+      "scored": 70
+    },
+    {
+      "day": "2024-05-10",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2609,
+      "scored": 69
+    },
+    {
+      "day": "2024-05-23",
+      "first_alarm_utc": "15:00Z",
+      "share_flagged": 0.2597,
+      "scored": 77
+    },
+    {
+      "day": "2024-05-28",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.254,
+      "scored": 63
+    },
+    {
+      "day": "2024-06-17",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.25,
+      "scored": 72
+    },
+    {
+      "day": "2024-06-24",
+      "first_alarm_utc": "13:00Z",
+      "share_flagged": 0.3056,
+      "scored": 72
+    },
+    {
+      "day": "2024-06-25",
+      "first_alarm_utc": "12:00Z",
+      "share_flagged": 0.2603,
+      "scored": 73
+    },
+    {
+      "day": "2024-07-12",
+      "first_alarm_utc": "15:00Z",
+      "share_flagged": 0.2651,
+      "scored": 83
+    },
+    {
+      "day": "2024-07-19",
+      "first_alarm_utc": "10:00Z",
+      "share_flagged": 0.8913,
+      "scored": 46
+    },
+    {
+      "day": "2024-07-20",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2609,
+      "scored": 69
+    },
+    {
+      "day": "2024-07-21",
+      "first_alarm_utc": "13:00Z",
+      "share_flagged": 0.2812,
+      "scored": 64
+    },
+    {
+      "day": "2024-07-22",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.25,
+      "scored": 68
+    },
+    {
+      "day": "2024-07-23",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.3284,
+      "scored": 67
+    },
+    {
+      "day": "2024-07-24",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.2817,
+      "scored": 71
+    },
+    {
+      "day": "2024-08-04",
+      "first_alarm_utc": "14:00Z",
+      "share_flagged": 0.2687,
+      "scored": 67
+    },
+    {
+      "day": "2024-08-05",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2941,
+      "scored": 68
+    },
+    {
+      "day": "2024-08-09",
+      "first_alarm_utc": "15:00Z",
+      "share_flagged": 0.2632,
+      "scored": 76
+    },
+    {
+      "day": "2024-09-27",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2857,
+      "scored": 70
+    },
+    {
+      "day": "2024-12-21",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.3108,
+      "scored": 74
+    },
+    {
+      "day": "2024-12-22",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2973,
+      "scored": 74
+    },
+    {
+      "day": "2024-12-24",
+      "first_alarm_utc": "13:00Z",
+      "share_flagged": 0.5455,
+      "scored": 88
+    },
+    {
+      "day": "2024-12-28",
+      "first_alarm_utc": "13:00Z",
+      "share_flagged": 0.2778,
+      "scored": 72
+    },
+    {
+      "day": "2024-12-29",
+      "first_alarm_utc": "11:00Z",
+      "share_flagged": 0.2877,
+      "scored": 73
+    }
+  ]
+}

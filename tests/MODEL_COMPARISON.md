@@ -30,7 +30,8 @@ happened; a forecaster does not have them.
 
 - **Train on 2023, test on 2024.** A full year apart. Neither method sees any
   part of the year it is scored on.
-- **Identical test rows, identical metrics** — 6,860,395 flights that operated.
+- **Identical test rows, identical metrics** — 6,860,395 flights that operated, from
+  all 15 carriers in the table, including Spirit and regional carriers.
 - Cancelled flights are excluded from both: they have no arrival delay, so they
   cannot teach or test a model about lateness.
 - Training samples 2,000,000 of 2023's 6.6 million usable rows. Training on all
@@ -41,7 +42,7 @@ happened; a forecaster does not have them.
 
 | | pinball (mean) | p10 | p50 | p90 | 80% coverage | median abs. error | interval width |
 |---|---|---|---|---|---|---|---|
-| **L1 lookup** | 9.540 | 3.952 | 12.474 | 12.194 | 70.9% | 13.0 min | 59.0 min |
+| **L1 lookup** | 9.542 | 3.952 | 12.475 | 12.198 | 70.9% | 13.0 min | 59.0 min |
 | **L2 model** | **8.476** | **3.383** | **11.543** | **10.502** | **77.0%** | **10.9 min** | 59.2 min |
 
 **L2 is 11.2% better on pinball loss**, and better at every individual quantile.

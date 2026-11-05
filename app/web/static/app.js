@@ -113,7 +113,7 @@ function renderTrip() {
     ${switchIt ? `<p>${sameReason}</p><p>Murphy's pick: <b>${optName(rec)}</b>, leaving ${rec.legs[0].dep_local}${rec.hub ? "" : " — no connection to miss"}.</p>`
                : `<p>Your booking is Murphy's top option of ${t.options.length} it found.${booked.same_region ? "" : " Its connection is outside your origin's group."}</p>`}
     <div class="trust ${abnormal ? "low" : "mid"}">${abnormal
-      ? "<b>Trust: low.</b> Ranking advice held up best on days like this; the delay range below did not."
+      ? "<b>Trust: low.</b> Today is unusual. Route advice is less certain, and the delay range below is less reliable."
       : "<b>Trust: normal.</b> On ordinary days the advice rarely changes, and that is expected."}</div>
     <div class="actions">
       ${switchIt ? `<button class="btn primary small" id="b-accept">Switch to this</button>` : `<button class="btn primary small" id="b-accept">Keep my booking</button>`}
